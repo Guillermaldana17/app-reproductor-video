@@ -3,6 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  fetch(`_api/Web/Lists/getbytitle('ACTA')/items?$select=*`, {  
+    accept: 'application/json;odata=verbose',
+  })
+  .then(r => r.json())
+  .then(console.log)
+  .catch(console.log);
+
   return (
     <div className="App">
       <header className="App-header">

@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
 
-  fetch(`_api/Web/Lists/getbytitle('ACTA')/items?$select=*`, {  
+  fetch(`_api/Web`, {  
     accept: 'application/json;odata=verbose',
   })
   .then(r => r.json())

@@ -1,26 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-
-  fetch(`_api/Web`, {  
-    accept: 'application/json;odata=verbose',
-  })
-  .then(r => r.json())
-  .then(console.log)
-  .catch(console.log);
-
+import { Provider } from 'react-redux';
+import store from './Services/store';
+import Home from './Containers/Home'
+const App = () => {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Probando proxy-sp
-        </p>
-        
-      </header>
-    </div>
+    <Provider store={store}>
+      <Home></Home>
+    </Provider>
   );
 }
 

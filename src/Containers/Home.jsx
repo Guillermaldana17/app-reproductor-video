@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Home = ({movieReducer:{objectMovie}}) => {
+const Home = ({movieReducer:{objectMovie},getItems}) => {
     const classes = useStyles();
     return( 
     <div className={classes.root}>

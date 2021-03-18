@@ -18,6 +18,7 @@ export const getItems = () => async dispatch => {
         .items
         .select('Title', 'Id','Created')
         .get();
+        
         console.log(items)
       dispatch({
         type: GET_ITEMS,
